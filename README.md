@@ -1,6 +1,8 @@
 # RandomForest_knn
 Lazy learning random forests with nearest neighbor localization for text classification
 
+Culmination of work done by Seyma Nur Günel and Harrison Froedge
+
 Random forest algorithms have seen considerable success since their emergence nearly two decades ago (Breiman, 2001). Random forests grow a number of decision trees in a random way (hence the name), selecting subsets of data attributes and sometimes bootstraps of training data to grow each component tree in a unique way. This method gives rise to an ensemble of better-than-random-guessing classifiers which, for a given test sample, each contribute their prediction (a "vote") for the final classification. The class which receives the majority of votes is chosen as the forest prediction
    
  Such constructs work together to reduce overfitting and increase generalization, areas which decision trees notoriously fall short. As noted by Salles et al. (2018), random forest classifiers reduce variance (as compared to single decision trees) while maintaining constant bias. This typically results in better, more robust models. Despite these gains over single trees, random forests still grapple with noise, and often times they succumb to the overly greedy and explicit fitting strategy of their component trees. This is especially a problem when the number of data attributes is very large or the data is sparse, since many random samples of attributes may create worthless trees which fit to some other, unrelated trend to the signal of interest. (Salles et al., 2018)
