@@ -10,7 +10,7 @@ Random forest algorithms have seen considerable success since their emergence ne
     
  To overcome the difficulties faced by random forests on noisy, high-dimensional data, authors Salles, T., Gonçalves, M., Rodrigues, V., & Rocha, L. presented the 2018 paper "Improving random forests by neighborhood projection for effective text classification", in which they detailed a novel lazy learning random forest, called LazyNN_RF, which trains itself only on the nearest neighbors to a test sample. By tuning the neighborhood of this projection (i.e., optimizing the number of neighbors), only samples of the same topic or nature need be considered. The authors claimed this implementation to significantly improve performance on certain noisy data sets over standard random forests and a number of other state-of-the-art classifiers. Furthermore, the authors claimed that such a procedure dramatically decreases training time for a random forest, since only a (usually very) small subset of data need be considered. The authors of this paper provided basic, high-level pseudocode for LazyNN_RF.
     
- Here, we present an implementation of LazyNN\_RF (which we rename RandomForest_knn), as well as analysis of its performance in comparison to two other random forest classifier baselines: our own, basic implementation (which uses sklearn decision trees for its ensemble components) as well as sklearn's RandomForestClassifier. 
+ Here, we present an implementation of LazyNN\_RF (which we rename RandomForest_knn).
     
     
 ## Intended Problem Domains
