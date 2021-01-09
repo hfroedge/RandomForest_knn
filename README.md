@@ -10,6 +10,15 @@ Random forest algorithms have seen considerable success since their emergence ne
  Here, we present an implementation of LazyNN\_RF (which we rename RandomForest_knn), as well as analysis of its performance in comparison to two other random forest classifier baselines: our own, basic implementation (which uses sklearn decision trees for its ensemble components) as well as sklearn's RandomForestClassifier. 
     
     
-  ## Intended Problem Domains
+## Intended Problem Domains
   
 The authors of the subject paper (Salles et al., 2018) designed their LazyNN_RF especially for text-classification tasks. Text-classification is a domain replete with noise and subtle nuance, challenges this lazy-learner is meant to conquer (by localizing itself to a given input sample, thus ignoring irrelevant data).
+
+
+## References
+
+Breiman, L. (2001). Random Forests. _Machine Learning, 45_, 5-32. 
+        
+Salles, T., Gonçalves, M., Rodrigues, V., & Rocha, L. (2018). Improving random forests by neighborhood projection for effective text classification. _Information Systems, 77_, 1-21. https://doi.org/10.1016/j.is.2018.05.006
+        
+_Simulated Annealing_. Retrieved January 1, 2021, from https://santhoshhari.github.io/simulated\_annealing/
