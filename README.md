@@ -4,7 +4,7 @@
 
 **Culmination of work done by Seyma Nur Günel and Harrison Froedge. Started December 2020**
 
-Pertinent code contained in random_forest.py and tuning.py. notebook.ipynb only contains some pre-processing work.
+### Pertinent code contained in random_forest.py and tuning.py. notebook.ipynb only contains some pre-processing work.
 
 Random forest algorithms have seen considerable success since their emergence nearly two decades ago (Breiman, 2001). Random forests grow a number of decision trees in a random way (hence the name), selecting subsets of data attributes and sometimes bootstraps of training data to grow each component tree in a unique way. This method gives rise to an ensemble of better-than-random-guessing classifiers which, for a given test sample, each contribute their prediction (a "vote") for the final classification. The class which receives the majority of votes is chosen as the forest prediction
    
