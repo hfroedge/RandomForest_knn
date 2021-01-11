@@ -8,15 +8,6 @@ import numpy
 
 
 class RandomForest:
-    """
-    param n_trees: int, default=100
-        number of classifiers to ensemble
-    
-    param criterion: {'gini', 'entropy'}, default='gini'
-        specifies purity function to use to make split decisions.
-
-    param max_depth: 
-    """
 
     def __init__(self, n_trees=100, criterion='gini', max_depth=None, min_samples_split=2, min_samples_leaf=1, max_features=None,
         random_state=None, max_leaf_nodes=None, min_impurity_decrease=0.0, min_impurity_split=None, class_weight=None, max_samples=None):
@@ -39,8 +30,8 @@ class RandomForest:
     
     def fit(self, X, y):
         """
-        param X:
-        param y:
+        param X: iterable of type list, np.array, sparse matrix, etc.
+        param y: iterable of type list, np.array, sparse matrix, etc.
         """
         self.trees = []
         data_indices = list(range(X.shape[0]))
@@ -75,7 +66,7 @@ class RandomForest:
 
     def predict(self, X)->np.array:
         """
-        param X:
+        param X: iterable of type list, np.array, sparse matrix, etc.
         """
         forest_predictions = np.array([])
 
@@ -96,8 +87,8 @@ class RandomForest:
 
     def score(self, X, y):
         """
-        param X:
-        param y:
+        param X: iterable of type list, np.array, sparse matrix, etc.
+        param y: iterable of type list, np.array, sparse matrix, etc.
         """
         predictions = self.predict(X)
         score = 0
@@ -130,8 +121,8 @@ class RandomForest_knn(RandomForest):
         Constructs a K-nearest neighbors relationship.
         k is class attribute - assumes variable k will not be of significant benefit
 
-        param X_train:
-        param y_train:
+        param X_train: iterable of type list, np.array, sparse matrix, etc.
+        param y_train: iterable of type list, np.array, sparse matrix, etc.
         param metric: str, default 'cosine',
             metric used for evaluating neighbor distances. from sklearn.metrics
         """
@@ -149,7 +140,7 @@ class RandomForest_knn(RandomForest):
 
     def predict(self, X):
         """
-        param X: np.array
+        param X: iterable of type list, np.array, sparse matrix, etc.
         """
         predictions = np.array([])
         for x in X:
@@ -168,8 +159,8 @@ class RandomForest_knn(RandomForest):
 
     def score(self, X, y):
         """
-        param X:
-        param y:
+        param X: iterable of type list, np.array, sparse matrix, etc.
+        param y: iterable of type list, np.array, sparse matrix, etc.
         """
         return super().score(X, y)
     
@@ -195,8 +186,8 @@ class RandomForest_skl_knn(rfc):
         Constructs a K-nearest neighbors relationship.
         k is class attribute - assumes variable k will not be of significant benefit
 
-        param X_train:
-        param y_train:
+        param X_train: iterable of type list, np.array, sparse matrix, etc.
+        param y_train: iterable of type list, np.array, sparse matrix, etc.
         param metric: str, default 'cosine',
             metric used for evaluating neighbor distances. from sklearn.metrics
         """
@@ -215,7 +206,7 @@ class RandomForest_skl_knn(rfc):
 
     def predict(self, X):
         """
-        param X: np.array
+        param X: iterable of type list, np.array, sparse matrix, etc.
         """
         predictions = np.array([])
         for x in X:
@@ -235,8 +226,8 @@ class RandomForest_skl_knn(rfc):
 
     def score(self, X, y):
         """
-        param X:
-        param y:
+        param X: iterable of type list, np.array, sparse matrix, etc.
+        param y: iterable of type list, np.array, sparse matrix, etc.
         """
         return super().score(X, y)
     
